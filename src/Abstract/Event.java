@@ -7,6 +7,12 @@ public abstract class Event {
         this.name = name;
         System.out.println("Событие " + name + " типа " + this.getClass().getName() + " произошло");
     }
-    public String getName(){return name;}
-    public void setName(String name){this.name = name;}
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

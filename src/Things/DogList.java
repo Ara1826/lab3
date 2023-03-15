@@ -3,7 +3,7 @@ package Things;
 import Abstract.Things;
 
 public class DogList extends Things {
-    public DogList(){
+    public DogList() {
         super("собачий журнал");
     }
 }

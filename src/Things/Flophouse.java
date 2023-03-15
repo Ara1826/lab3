@@ -1,4 +1,5 @@
 package Things;
+
 import Abstract.Things;
 
 public class Flophouse extends Things {

@@ -1,12 +1,10 @@
-import Abstract.Event;
-import Abstract.Things;
 import Characters.*;
 import Events.*;
-import Exceptions.NoSuchIventException;
+import Exceptions.NoFoodException;
 import Things.*;
 
 public class Main {
-    public static void main(String... args){
+    public static void main(String... args) {
         Neznajka neznajka = new Neznajka();
         Doctor doctor = new Doctor();
         Gardener sadovnic = new Gardener();
@@ -26,7 +24,9 @@ public class Main {
         Theatre teatr = new Theatre();
         Dinner uzhin = new Dinner();
         Healing lechebnica = new Healing();
-        dogs.Vernutsa(dogs);
+        System.out.println();
+
+        dogs.Vernutsa();
         dogs.Sport();
         dogs.Sadgon();
         dogs.Kust();
@@ -37,10 +37,13 @@ public class Main {
         neznajka.Run(kozlik);
         neznajka.Do();
         neznajka.Kuchats(dogs);
-        neznajka.Noteatall(neznajka);
-        Things[] thing = {hleb, kotlet, pirojok};
-        neznajka.Hide(thing);
-        neznajka.Nesti(kozlik);
+        neznajka.eat();
+
+        try {
+            neznajka.Nesti(kozlik);
+        } catch (NoFoodException e) {
+            System.out.println(e.getMessage());
+        }
         neznajka.Govorit(neznajka);
         neznajka.Help();
         kozlik.Locatedin(nochleg);
@@ -54,9 +57,6 @@ public class Main {
         neznajka.Invite(kozlik, doctor);
         doctor.Osmotr(kozlik);
         doctor.Diagnoz();
-
-
-
+//        throw new NullPointerException();
     }
-
 }

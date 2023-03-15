@@ -7,7 +7,7 @@ public class Week extends Event {
         super("неделя");
     }
 
-    public void Pass(){
+    public void Pass() {
         System.out.println("прошла " + getName());
     }
 }

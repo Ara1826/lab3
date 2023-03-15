@@ -1,7 +1,9 @@
 package Things;
+
 import Abstract.Things;
+
 public class Wealthyhouse extends Things {
-    public Wealthyhouse (){
+    public Wealthyhouse() {
         super(" богатый дом ");
     }
 }
